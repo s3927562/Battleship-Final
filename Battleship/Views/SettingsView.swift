@@ -54,8 +54,6 @@ struct SettingsView: View {
                         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                             let file = dir.appendingPathComponent(fileName)
                             if FileManager.default.fileExists(atPath: file.path) {
-                                print ("exist")
-                                let data = try! Data(contentsOf: file)
                                 do {
                                     try FileManager.default.removeItem(at: file)
                                 } catch let error {
