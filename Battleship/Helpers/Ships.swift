@@ -12,11 +12,21 @@ struct Ships {
     
     var ships: [Ship] = []
     
-    func deploy(on ocean: Ocean) -> Bool {
+    mutating func deploy(on ocean: Ocean) -> Bool {
+        ships.removeAll()
         for ship in Ships.shipLengths {
             let currentCoordinates = self.coordinates()
             let possibleLocations = ocean.possibleLocations(for: ship).filter { Set($0).intersection(currentCoordinates).isEmpty }
+            guard (possibleLocations.count > 0) else {
+                return false
+            }
+            
+            let index = Int.random(in: 0..<possibleLocations.count)
+            let shipLocation = possibleLocations[index]
+            ships.append(Ship(location: shipLocation))
         }
+        
+        return true
     }
     
     func coordinates() -> [Coordinate] {
