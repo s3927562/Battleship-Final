@@ -8,8 +8,13 @@
 import Foundation
 
 struct Ocean {
-    var columns: Int
     var rows: Int
+    var columns: Int
+    
+    init(_ rows: Int, _ columns: Int) {
+        self.rows = rows
+        self.columns = columns
+    }
     
     func possibleLocations(for length: Int) -> [[Coordinate]] {
         var locations: [[Coordinate]] = []
