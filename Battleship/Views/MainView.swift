@@ -5,6 +5,8 @@
 //  Created by Tung Tran Thanh on 26/08/2023.
 //
 //  https://www.avanderlee.com/swiftui/presenting-sheets/
+//  https://stackoverflow.com/questions/57517803/how-to-remove-the-default-navigation-bar-space-in-swiftui-navigationview
+//  https://developer.apple.com/forums/thread/719989
 
 import SwiftUI
 
@@ -22,71 +24,75 @@ struct MainView: View {
     }
     
     var body: some View {
-        VStack {
-            Image(isDarkMode ? "rmit-logo-white" : "rmit-logo-black")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            Spacer()
-            Text("Battleship")
-                .font(.largeTitle)
-                .bold()
-            
-            Group {
+        NavigationStack {
+            VStack {
+                Image(isDarkMode ? "rmit-logo-white" : "rmit-logo-black")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 Spacer()
+                Text("Battleship")
+                    .font(.largeTitle)
+                    .bold()
                 
-                Button {
+                Group {
+                    Spacer()
                     
-                } label: {
-                    Text("New Game")
-                        .frame(maxWidth: .infinity, maxHeight: 32)
-                }
-                .buttonStyle(.borderedProminent)
-                
-                Button {
+                    NavigationLink {
+                        GameView()
+                    } label: {
+                        Text("New Game")
+                            .frame(maxWidth: .infinity, maxHeight: 34)
+                    }
+                    .buttonStyle(.borderedProminent)
                     
-                } label: {
-                    Text("Continue")
-                        .frame(maxWidth: .infinity, maxHeight: 32)
+                    Button {
+                        
+                    } label: {
+                        Text("Continue")
+                            .frame(maxWidth: .infinity, maxHeight: 34)
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(true)
+                    
+                    Button {
+                        showSheet = .leaderboard
+                    } label: {
+                        Text("Leaderboards & Statistics")
+                            .frame(height: 34)
+                    }
+                    
+                    Button {
+                        showSheet = .settings
+                    } label: {
+                        Text("Settings")
+                            .frame(height: 34)
+                    }
+                    
+                    Button {
+                        showSheet = .howToPlay
+                    } label: {
+                        Text("How to Play")
+                            .frame(height: 34)
+                    }
+                    
+                    Spacer()
                 }
-                .buttonStyle(.bordered)
-                .disabled(true)
                 
-                Button {
-                    showSheet = .leaderboard
-                } label: {
-                    Text("Leaderboards & Statistics")
-                        .frame(height: 32)
+                HStack {
+                    Spacer()
+                    Button {
+                        showAlert = true
+                    } label: {
+                        Image(systemName: "info.circle.fill")
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(Color.white, Color.accentColor)
+                    }
                 }
-                
-                Button {
-                    showSheet = .settings
-                } label: {
-                    Text("Settings")
-                        .frame(height: 32)
-                }
-                
-                Button {
-                    showSheet = .howToPlay
-                } label: {
-                    Text("How to Play")
-                        .frame(height: 32)
-                }
-                
-                Spacer()
             }
-            
-            HStack {
-                Spacer()
-                Button {
-                    showAlert = true
-                } label: {
-                    Image(systemName: "info.circle.fill")
-                        .symbolRenderingMode(.palette)
-                        .foregroundStyle(Color.white, Color.accentColor)
-                }
-            }
+            .padding()
+            .navigationTitle("Main Menu")
+            .navigationBarHidden(true)
         }
-        .padding()
         .onAppear {
             if isFirstLaunch {
                 isDarkMode = colorScheme == .dark ? true : false
@@ -101,13 +107,13 @@ struct MainView: View {
                 Text("Name: Tran Thanh Tung\nStudent ID: s3927562\nProgram: BH120 - Bachelor of Engineering (Software Engineering) (Honours)")
             }
         }
-        .sheet(item: $showSheet, content: { sheet in
+        .sheet(item: $showSheet) { sheet in
             switch sheet {
-            case .leaderboard: LeaderboardView()
-            case .settings: SettingsView()
-            case .howToPlay: MainView()
+            case .leaderboard: LeaderboardSheet()
+            case .settings: SettingsSheet()
+            case .howToPlay: HowToPlaySheet()
             }
-        })
+        }
     }
 }
 

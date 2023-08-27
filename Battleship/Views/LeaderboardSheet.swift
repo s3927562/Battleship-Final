@@ -4,15 +4,15 @@
 //
 //  Created by Tung Tran Thanh on 26/08/2023.
 //
-//  https://sarunw.com/posts/swiftui-form/
+//  https://blog.logrocket.com/building-forms-swiftui-comprehensive-guide/#converting-components-form
 //  https://sarunw.com/posts/swiftui-form-picker-styles/
 
 import SwiftUI
 
-struct LeaderboardView: View {
+struct LeaderboardSheet: View {
     @Environment(\.dismiss) private var dismiss
     @State private var selectedDifficulty = "Easy"
-    @State private var selectedLeaderboard = Leaderboard(total: 0, win: 0, scores: [])
+    @State private var selectedLeaderboard = Leaderboard()
     
     var body: some View {
         NavigationStack {
@@ -20,7 +20,7 @@ struct LeaderboardView: View {
                 Form {
                     Section {
                         Picker("", selection: $selectedDifficulty) {
-                            ForEach(Array(difficulties).sorted { $0.value < $1.value }, id: \.self.key) {
+                            ForEach(Array(difficultyDict).sorted { $0.value.id < $1.value.id }, id: \.self.key) {
                                 Text($0.key)
                             }
                         }
@@ -56,22 +56,14 @@ struct LeaderboardView: View {
                 selectedLeaderboard = leaderboardDict[selectedDifficulty]!
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                        Text("Main Menu")
-                    }
-
-                }
+                SheetToolbar()
             }
         }
     }
 }
 
-struct LeaderboardView_Previews: PreviewProvider {
+struct LeaderboardSheet_Previews: PreviewProvider {
     static var previews: some View {
-        LeaderboardView()
+        LeaderboardSheet()
     }
 }
