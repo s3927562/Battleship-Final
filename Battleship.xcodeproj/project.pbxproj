@@ -15,17 +15,20 @@
 		1401C9822A99F48E00DAD4CA /* LeaderboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401C9812A99F48E00DAD4CA /* LeaderboardData.swift */; };
 		1401C98B2A9A021600DAD4CA /* LeaderboardSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401C98A2A9A021600DAD4CA /* LeaderboardSheet.swift */; };
 		1401C98F2A9A0D5800DAD4CA /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401C98E2A9A0D5800DAD4CA /* SettingsSheet.swift */; };
-		1452C48A2A9B311600F351A6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4892A9B311600F351A6 /* GameView.swift */; };
+		141195202A9CBEB900745425 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411951F2A9CBEB900745425 /* Coordinate.swift */; };
+		141195222A9CBF5700745425 /* ShipPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141195212A9CBF5700745425 /* ShipPart.swift */; };
+		141195242A9CBFBE00745425 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141195232A9CBFBE00745425 /* GameView.swift */; };
+		141195262A9CC01C00745425 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141195252A9CC01C00745425 /* Ship.swift */; };
+		141195282A9CC12100745425 /* Fleet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141195272A9CC12000745425 /* Fleet.swift */; };
+		1411952A2A9CC20800745425 /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141195292A9CC20800745425 /* Ocean.swift */; };
+		1411952C2A9CC44C00745425 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952B2A9CC44C00745425 /* Game.swift */; };
+		1411952E2A9CC5F300745425 /* OceanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952D2A9CC5F300745425 /* OceanState.swift */; };
+		141195302A9CD00200745425 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952F2A9CD00200745425 /* GameState.swift */; };
 		1452C48C2A9B360500F351A6 /* HowToPlaySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C48B2A9B360500F351A6 /* HowToPlaySheet.swift */; };
 		1452C4932A9B381B00F351A6 /* SheetToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4922A9B381B00F351A6 /* SheetToolbar.swift */; };
 		1452C4952A9B39AF00F351A6 /* DifficultyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4942A9B39AF00F351A6 /* DifficultyData.swift */; };
-		1452C4972A9B5D5A00F351A6 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4962A9B5D5A00F351A6 /* Coordinate.swift */; };
 		1452C4992A9B5DD400F351A6 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4982A9B5DD400F351A6 /* Score.swift */; };
 		1452C49B2A9B5DEC00F351A6 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */; };
-		1452C49D2A9B5F9800F351A6 /* ShipPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C49C2A9B5F9800F351A6 /* ShipPart.swift */; };
-		1452C49F2A9B601F00F351A6 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C49E2A9B601F00F351A6 /* Ship.swift */; };
-		1452C4A12A9B613E00F351A6 /* Ships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4A02A9B613E00F351A6 /* Ships.swift */; };
-		1452C4A32A9B64B700F351A6 /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4A22A9B64B700F351A6 /* Ocean.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,17 +41,20 @@
 		1401C9812A99F48E00DAD4CA /* LeaderboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardData.swift; sourceTree = "<group>"; };
 		1401C98A2A9A021600DAD4CA /* LeaderboardSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardSheet.swift; sourceTree = "<group>"; };
 		1401C98E2A9A0D5800DAD4CA /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
-		1452C4892A9B311600F351A6 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		1411951F2A9CBEB900745425 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		141195212A9CBF5700745425 /* ShipPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipPart.swift; sourceTree = "<group>"; };
+		141195232A9CBFBE00745425 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		141195252A9CC01C00745425 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		141195272A9CC12000745425 /* Fleet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fleet.swift; sourceTree = "<group>"; };
+		141195292A9CC20800745425 /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
+		1411952B2A9CC44C00745425 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1411952D2A9CC5F300745425 /* OceanState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanState.swift; sourceTree = "<group>"; };
+		1411952F2A9CD00200745425 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		1452C48B2A9B360500F351A6 /* HowToPlaySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlaySheet.swift; sourceTree = "<group>"; };
 		1452C4922A9B381B00F351A6 /* SheetToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetToolbar.swift; sourceTree = "<group>"; };
 		1452C4942A9B39AF00F351A6 /* DifficultyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyData.swift; sourceTree = "<group>"; };
-		1452C4962A9B5D5A00F351A6 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		1452C4982A9B5DD400F351A6 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
-		1452C49C2A9B5F9800F351A6 /* ShipPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipPart.swift; sourceTree = "<group>"; };
-		1452C49E2A9B601F00F351A6 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
-		1452C4A02A9B613E00F351A6 /* Ships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ships.swift; sourceTree = "<group>"; };
-		1452C4A22A9B64B700F351A6 /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				1401C9722A99F2F400DAD4CA /* MainView.swift */,
-				1452C4892A9B311600F351A6 /* GameView.swift */,
+				141195232A9CBFBE00745425 /* GameView.swift */,
 				1401C98A2A9A021600DAD4CA /* LeaderboardSheet.swift */,
 				1401C98E2A9A0D5800DAD4CA /* SettingsSheet.swift */,
 				1452C48B2A9B360500F351A6 /* HowToPlaySheet.swift */,
@@ -127,11 +133,14 @@
 		1452C48F2A9B376200F351A6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1452C4962A9B5D5A00F351A6 /* Coordinate.swift */,
-				1452C49C2A9B5F9800F351A6 /* ShipPart.swift */,
-				1452C49E2A9B601F00F351A6 /* Ship.swift */,
-				1452C4A02A9B613E00F351A6 /* Ships.swift */,
-				1452C4A22A9B64B700F351A6 /* Ocean.swift */,
+				1411951F2A9CBEB900745425 /* Coordinate.swift */,
+				141195212A9CBF5700745425 /* ShipPart.swift */,
+				141195252A9CC01C00745425 /* Ship.swift */,
+				141195272A9CC12000745425 /* Fleet.swift */,
+				141195292A9CC20800745425 /* Ocean.swift */,
+				1411952B2A9CC44C00745425 /* Game.swift */,
+				1411952D2A9CC5F300745425 /* OceanState.swift */,
+				1411952F2A9CD00200745425 /* GameState.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -209,20 +218,23 @@
 			files = (
 				1452C49B2A9B5DEC00F351A6 /* Leaderboard.swift in Sources */,
 				1401C98F2A9A0D5800DAD4CA /* SettingsSheet.swift in Sources */,
+				1411952E2A9CC5F300745425 /* OceanState.swift in Sources */,
 				1452C4932A9B381B00F351A6 /* SheetToolbar.swift in Sources */,
 				1401C98B2A9A021600DAD4CA /* LeaderboardSheet.swift in Sources */,
 				1401C9732A99F2F400DAD4CA /* MainView.swift in Sources */,
-				1452C49F2A9B601F00F351A6 /* Ship.swift in Sources */,
-				1452C49D2A9B5F9800F351A6 /* ShipPart.swift in Sources */,
+				141195262A9CC01C00745425 /* Ship.swift in Sources */,
+				141195302A9CD00200745425 /* GameState.swift in Sources */,
+				141195202A9CBEB900745425 /* Coordinate.swift in Sources */,
+				141195282A9CC12100745425 /* Fleet.swift in Sources */,
 				1401C9712A99F2F400DAD4CA /* BattleshipApp.swift in Sources */,
 				1452C4952A9B39AF00F351A6 /* DifficultyData.swift in Sources */,
-				1452C48A2A9B311600F351A6 /* GameView.swift in Sources */,
+				141195222A9CBF5700745425 /* ShipPart.swift in Sources */,
 				1401C9822A99F48E00DAD4CA /* LeaderboardData.swift in Sources */,
+				1411952A2A9CC20800745425 /* Ocean.swift in Sources */,
+				1411952C2A9CC44C00745425 /* Game.swift in Sources */,
 				1452C48C2A9B360500F351A6 /* HowToPlaySheet.swift in Sources */,
-				1452C4A32A9B64B700F351A6 /* Ocean.swift in Sources */,
-				1452C4A12A9B613E00F351A6 /* Ships.swift in Sources */,
+				141195242A9CBFBE00745425 /* GameView.swift in Sources */,
 				1452C4992A9B5DD400F351A6 /* Score.swift in Sources */,
-				1452C4972A9B5D5A00F351A6 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

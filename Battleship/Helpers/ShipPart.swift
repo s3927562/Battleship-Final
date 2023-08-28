@@ -2,12 +2,16 @@
 //  ShipPart.swift
 //  Battleship
 //
-//  Created by Tung Tran Thanh on 27/08/2023.
+//  Created by Tung Tran Thanh on 28/08/2023.
 //
 
 import Foundation
 
-struct ShipPart {
-    var coordinate = Coordinate()
+class ShipPart {
+    var location = Coordinate()
     var isHit = false
+    
+    init(location: Coordinate) {
+        self.location = location
+    }
 }
