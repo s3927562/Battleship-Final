@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HowToPlaySheet: View {
     var body: some View {
+        // NavigationStack for back button
         NavigationStack {
             VStack {
                 Text("Helpful Text")

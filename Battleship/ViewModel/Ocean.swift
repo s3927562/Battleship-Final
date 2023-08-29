@@ -8,27 +8,30 @@
 import Foundation
 
 struct Ocean {
-    var rows = 8
-    var columns = 8
+    var dimension = 0
     
+    // Find all places that a Ship of a certain length can fit
+    // Each place is an array of Coordinates for the Ship
     func possibleLocations(for shipLength: Int) -> [[Coordinate]] {
         var locations: [[Coordinate]] = []
         
-        for y in 0..<rows {
-            for shipBow in 0...(columns - shipLength) {
+        // Horizontal fit
+        for y in 0..<self.dimension {
+            for shipBow in 0...(self.dimension - shipLength) {
                 var shipLocation: [Coordinate] = []
                 for x in shipBow..<(shipBow + shipLength) {
-                    shipLocation.append(Coordinate(x: x, y: y))
+                    shipLocation.append(Coordinate(x, y))
                 }
                 locations.append(shipLocation)
             }
         }
         
-        for x in 0..<columns {
-            for shipBow in 0...(rows - shipLength) {
+        // Vertical fit
+        for x in 0..<self.dimension {
+            for shipBow in 0...(self.dimension - shipLength) {
                 var shipLocation: [Coordinate] = []
                 for y in shipBow..<(shipBow + shipLength) {
-                    shipLocation.append(Coordinate(x: x, y: y))
+                    shipLocation.append(Coordinate(x, y))
                 }
                 locations.append(shipLocation)
             }

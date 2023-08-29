@@ -26,7 +26,7 @@
 		141195302A9CD00200745425 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952F2A9CD00200745425 /* GameState.swift */; };
 		1452C48C2A9B360500F351A6 /* HowToPlaySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C48B2A9B360500F351A6 /* HowToPlaySheet.swift */; };
 		1452C4932A9B381B00F351A6 /* SheetToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4922A9B381B00F351A6 /* SheetToolbar.swift */; };
-		1452C4952A9B39AF00F351A6 /* DifficultyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4942A9B39AF00F351A6 /* DifficultyData.swift */; };
+		1452C4952A9B39AF00F351A6 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4942A9B39AF00F351A6 /* Difficulty.swift */; };
 		1452C4992A9B5DD400F351A6 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4982A9B5DD400F351A6 /* Score.swift */; };
 		1452C49B2A9B5DEC00F351A6 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 		1411952F2A9CD00200745425 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		1452C48B2A9B360500F351A6 /* HowToPlaySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlaySheet.swift; sourceTree = "<group>"; };
 		1452C4922A9B381B00F351A6 /* SheetToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetToolbar.swift; sourceTree = "<group>"; };
-		1452C4942A9B39AF00F351A6 /* DifficultyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyData.swift; sourceTree = "<group>"; };
+		1452C4942A9B39AF00F351A6 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		1452C4982A9B5DD400F351A6 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,8 +87,9 @@
 		1401C96F2A99F2F400DAD4CA /* Battleship */ = {
 			isa = PBXGroup;
 			children = (
-				1452C48F2A9B376200F351A6 /* Helpers */,
+				14AFB08F2A9E25CD000A940F /* Enums */,
 				1401C9802A99F45500DAD4CA /* Models */,
+				1452C48F2A9B376200F351A6 /* ViewModel */,
 				1401C9872A99FFDF00DAD4CA /* Views */,
 				1401C9702A99F2F400DAD4CA /* BattleshipApp.swift */,
 				1401C9742A99F2F600DAD4CA /* Assets.xcassets */,
@@ -112,7 +113,6 @@
 				1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */,
 				1401C9812A99F48E00DAD4CA /* LeaderboardData.swift */,
 				1401C97E2A99F30A00DAD4CA /* default.json */,
-				1452C4942A9B39AF00F351A6 /* DifficultyData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,19 +130,27 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1452C48F2A9B376200F351A6 /* Helpers */ = {
+		1452C48F2A9B376200F351A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				1411951F2A9CBEB900745425 /* Coordinate.swift */,
 				141195212A9CBF5700745425 /* ShipPart.swift */,
 				141195252A9CC01C00745425 /* Ship.swift */,
-				141195272A9CC12000745425 /* Fleet.swift */,
 				141195292A9CC20800745425 /* Ocean.swift */,
+				141195272A9CC12000745425 /* Fleet.swift */,
 				1411952B2A9CC44C00745425 /* Game.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14AFB08F2A9E25CD000A940F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1452C4942A9B39AF00F351A6 /* Difficulty.swift */,
 				1411952D2A9CC5F300745425 /* OceanState.swift */,
 				1411952F2A9CD00200745425 /* GameState.swift */,
 			);
-			path = Helpers;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +235,7 @@
 				141195202A9CBEB900745425 /* Coordinate.swift in Sources */,
 				141195282A9CC12100745425 /* Fleet.swift in Sources */,
 				1401C9712A99F2F400DAD4CA /* BattleshipApp.swift in Sources */,
-				1452C4952A9B39AF00F351A6 /* DifficultyData.swift in Sources */,
+				1452C4952A9B39AF00F351A6 /* Difficulty.swift in Sources */,
 				141195222A9CBF5700745425 /* ShipPart.swift in Sources */,
 				1401C9822A99F48E00DAD4CA /* LeaderboardData.swift in Sources */,
 				1411952A2A9CC20800745425 /* Ocean.swift in Sources */,

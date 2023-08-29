@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct GameView: View {
+    // For dismissing sheets and go to previous view of a NavigationStack
     @Environment(\.dismiss) private var dismiss
+    
+    @AppStorage("selectedDifficulty") private var selectedDifficulty: Difficulty = .Easy
     @StateObject private var game = Game()
     @State private var showCover = false
     @State private var range = 0..<0
     @State private var columns: [GridItem] = []
+    @State private var showSheet = false
     
     var body: some View {
         VStack {
-            LazyVGrid(columns: columns, spacing: CGFloat(8 * (9 - game.columns))) {
+            LazyVGrid(columns: columns, spacing: UIScreen.main.bounds.size.height / CGFloat(game.dimension + 1)) {
                 ForEach(range, id: \.self) {index in
-                    let y = index / game.rows
-                    let x = index - (y * game.columns)
-                    let location = Coordinate(x: x, y: y)
+                    let y = index / game.dimension
+                    let x = index - (y * game.dimension)
+                    let location = Coordinate(x, y)
                     ZStack {
                         Button {
                             game.shoot(location: location)
@@ -39,10 +43,9 @@ struct GameView: View {
                 }
             }
             .onAppear {
-                game.rows = 8
-                game.columns = 8
-                range = 0..<(game.columns * game.rows)
-                columns = [GridItem](repeating: GridItem(.flexible(), spacing: 0), count: game.columns)
+                game.dimension = selectedDifficulty.dimension
+                range = 0..<(game.dimension * game.dimension)
+                columns = [GridItem](repeating: GridItem(.flexible(), spacing: 0), count: game.dimension)
                 game.start()
             }
             .onChange(of: game.state) { _ in
@@ -70,9 +73,19 @@ struct GameView: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Text("Moves: \(game.moves)")
+                ToolbarItem(placement: .bottomBar) {
+                    Text("Moves: \(game.moveCount)")
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showSheet = true
+                    } label: {
+                        Image(systemName: "gear")
+                    }
+                }
+            }
+            .sheet(isPresented: $showSheet) {
+                SettingsSheet(isInGame: true)
             }
         }
     }

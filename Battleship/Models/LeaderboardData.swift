@@ -4,17 +4,21 @@
 //
 //  Created by Tung Tran Thanh on 26/08/2023.
 //
+//  https://www.swiftyplace.com/blog/file-manager-in-swift-reading-writing-and-deleting-files-and-directories
 //  https://stackoverflow.com/questions/24181699/how-to-check-if-a-file-exists-in-the-documents-directory-in-swift
 
 import Foundation
 
 var leaderboardDict: [String: Leaderboard] {
     var dict: [String: Leaderboard] = [:]
-    for difficulty in difficultyDict.keys {
-        let fileName = "\(difficulty.lowercased()).json"
+    
+    for difficulty in Difficulty.allCases {
+        // Get path to leaderboard data file
+        let fileName = "\(difficulty.rawValue.lowercased()).json"
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let file = dir.appendingPathComponent(fileName)
             
+            // Copy default leaderboard data if leaderboard data file doesn't exist
             if !FileManager.default.fileExists(atPath: file.path) {
                 if let defaultFile = Bundle.main.url(forResource: "default.json", withExtension: nil) {
                     do {
@@ -25,11 +29,12 @@ var leaderboardDict: [String: Leaderboard] {
                 }
             }
             
+            // Read from leaderboard data file
             if let data = try? Data(contentsOf: file) {
                 do {
                     let decoder = JSONDecoder()
                     let decoded = try decoder.decode([Leaderboard].self, from: data)[0]
-                    dict[difficulty] = decoded
+                    dict[difficulty.rawValue] = decoded
                 } catch let error {
                     fatalError("Failed to decode JSON '\(fileName)': \(error)")
                 }

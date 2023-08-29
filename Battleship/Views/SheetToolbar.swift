@@ -11,6 +11,7 @@
 import SwiftUI
 
 struct SheetToolbar: ToolbarContent {
+    // For dismissing sheet
     @Environment(\.dismiss) private var dismiss
     
     var body: some ToolbarContent {

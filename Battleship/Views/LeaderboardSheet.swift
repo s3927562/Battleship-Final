@@ -10,18 +10,19 @@
 import SwiftUI
 
 struct LeaderboardSheet: View {
-    @Environment(\.dismiss) private var dismiss
-    @State private var selectedDifficulty = "Easy"
+    @State private var selectedDifficulty: Difficulty = .Easy
     @State private var selectedLeaderboard = Leaderboard()
     
     var body: some View {
+        // NavigationStack for back button
         NavigationStack {
             VStack {
                 Form {
+                    // Picker for choosing which difficulty to display leaderboard and statistics for
                     Section {
                         Picker("", selection: $selectedDifficulty) {
-                            ForEach(Array(difficultyDict).sorted { $0.value.id < $1.value.id }, id: \.self.key) {
-                                Text($0.key)
+                            ForEach(Difficulty.allCases.sorted { $0.dimension < $1.dimension }, id: \.self) {
+                                Text($0.rawValue)
                             }
                         }
                         .pickerStyle(.segmented)
@@ -29,6 +30,7 @@ struct LeaderboardSheet: View {
                         Text("Difficulty")
                     }
                     
+                    // Leaderboard
                     Section {
                         ForEach(selectedLeaderboard.scores) {
                             if ($0.username == "" && $0.score == 0) {
@@ -41,6 +43,7 @@ struct LeaderboardSheet: View {
                         Text("Leaderboard")
                     }
                     
+                    // Statistics
                     Section {
                         LabeledContent("Games Total", value: String(selectedLeaderboard.total))
                         LabeledContent("Games Won", value: "\(selectedLeaderboard.win) (\(selectedLeaderboard.winPercentage)%)")
@@ -49,14 +52,16 @@ struct LeaderboardSheet: View {
                     }
                 }
             }
-            .onAppear {
-                selectedLeaderboard = leaderboardDict[selectedDifficulty]!
-            }
-            .onChange(of: selectedDifficulty) { _ in
-                selectedLeaderboard = leaderboardDict[selectedDifficulty]!
-            }
             .toolbar {
                 SheetToolbar()
+            }
+            
+            // Set leaderboard to display on view appearing and changing difficulty
+            .onAppear {
+                selectedLeaderboard = leaderboardDict[selectedDifficulty.rawValue]!
+            }
+            .onChange(of: selectedDifficulty) { _ in
+                selectedLeaderboard = leaderboardDict[selectedDifficulty.rawValue]!
             }
         }
     }

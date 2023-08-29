@@ -5,43 +5,53 @@
         "scores": [
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             },
             {
                 "username": "",
-                "score": 0
+                "score": 0,
+                "gameNumber": 0
             }
         ]
     }

@@ -8,9 +8,11 @@
 
 import Foundation
 
+// Leaderboard: Keep track of games played, game won, and top scores
+
 struct Leaderboard: Codable {
-    var total: Int
-    var win: Int
+    var total = 0
+    var win = 0
     var winPercentage: String {
         if total > 0 {
             return String(format: "%.2f", Double(win) / Double(total) * 100)
@@ -18,11 +20,5 @@ struct Leaderboard: Codable {
         
         return "0.00"
     }
-    var scores: [Score]
-    
-    init() {
-        self.total = 0
-        self.win = 0
-        self.scores = []
-    }
+    var scores: [Score] = []
 }

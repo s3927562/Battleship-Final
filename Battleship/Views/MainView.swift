@@ -11,12 +11,20 @@
 import SwiftUI
 
 struct MainView: View {
+    // Get system color scheme
     @Environment(\.colorScheme) private var colorScheme
-    @AppStorage("isFirstLaunch") private var isFirstLaunch = true
-    @AppStorage("isDarkMode") private var isDarkMode = false
-    @State private var showAlert = false
-    @State private var showSheet: showSheets?
     
+    // Check for first launch to set dark mode settings
+    @AppStorage("isFirstLaunch") private var isFirstLaunch = true
+    
+    // Storing dark mode settings
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
+    // Showing alert
+    @State private var showAlert = false
+    
+    // Choosing which view to show on sheet
+    @State private var showSheet: showSheets?
     enum showSheets: String, Identifiable {
         case leaderboard, settings, howToPlay
         
@@ -26,14 +34,20 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Image(isDarkMode ? "rmit-logo-white" : "rmit-logo-black")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Spacer()
-                Text("Battleship")
-                    .font(.largeTitle)
-                    .bold()
+                // RMIT logo and game title
+                Group {
+                    Image(isDarkMode ? "rmit-logo-white" : "rmit-logo-black")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    
+                    Spacer()
+                    
+                    Text("Battleship")
+                        .font(.largeTitle)
+                        .bold()
+                }
                 
+                // Buttons
                 Group {
                     Spacer()
                     
@@ -78,6 +92,7 @@ struct MainView: View {
                     Spacer()
                 }
                 
+                // Info button
                 HStack {
                     Spacer()
                     Button {
@@ -93,13 +108,17 @@ struct MainView: View {
             .navigationTitle("Main Menu")
             .navigationBarHidden(true)
         }
+        .preferredColorScheme(isDarkMode ? .dark : .light)
+        
         .onAppear {
+            // Settings dark mode on first launch
             if isFirstLaunch {
                 isDarkMode = colorScheme == .dark ? true : false
                 isFirstLaunch = false
             }
         }
-        .preferredColorScheme(isDarkMode ? .dark : .light)
+        
+        // Info alert
         .alert("Information", isPresented: $showAlert) {
             // Default is already "OK" Button
         } message: {
@@ -107,6 +126,8 @@ struct MainView: View {
                 Text("Name: Tran Thanh Tung\nStudent ID: s3927562\nProgram: BH120 - Bachelor of Engineering (Software Engineering) (Honours)")
             }
         }
+        
+        // Various sheet views
         .sheet(item: $showSheet) { sheet in
             switch sheet {
             case .leaderboard: LeaderboardSheet()
