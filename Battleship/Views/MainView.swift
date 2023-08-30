@@ -127,7 +127,7 @@ struct MainView: View {
             }
         }
         
-        // Various sheet views
+        // Sheet views
         .sheet(item: $showSheet) { sheet in
             switch sheet {
             case .leaderboard: LeaderboardSheet()

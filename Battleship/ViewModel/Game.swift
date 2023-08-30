@@ -72,6 +72,8 @@ class Game: ObservableObject {
     func updateState() {
         if (self.fleet.isDestroyed) {
             self.state = .win
+        } else if (moveCount >= moveLimit) {
+            self.state = .lose
         } else {
             self.state = .ongoing
         }

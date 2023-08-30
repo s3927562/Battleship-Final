@@ -7,8 +7,10 @@
 
 import Foundation
 
-enum GameState {
+enum GameState: Identifiable {
     case lose
     case ongoing
     case win
+    
+    var id: UUID { UUID() }
 }

@@ -14,6 +14,9 @@ struct SheetToolbar: ToolbarContent {
     // For dismissing sheet
     @Environment(\.dismiss) private var dismiss
     
+    // Change back button during gameplay
+    var isInGame = false
+    
     var body: some ToolbarContent {
         // Mimicking back button on views
         ToolbarItem(placement: .navigationBarLeading) {
@@ -22,7 +25,11 @@ struct SheetToolbar: ToolbarContent {
             } label: {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 17, weight: .semibold))
-                Text("Main Menu")
+                if (isInGame) {
+                    Text("Back to Game")
+                } else {
+                    Text("Main Menu")
+                }
             }
         }
     }

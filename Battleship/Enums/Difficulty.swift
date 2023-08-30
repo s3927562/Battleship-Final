@@ -21,7 +21,11 @@ enum Difficulty: String, CaseIterable {
         }
     }
     
+    var moveLimit: Int {
+        return self.dimension * self.dimension * 75 / 100
+    }
+    
     var description: String {
-        "\(self.dimension) x \(self.dimension) Area"
+        "\(self.dimension) x \(self.dimension) Grid, Maximum \(moveLimit) moves"
     }
 }

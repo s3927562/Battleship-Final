@@ -52,6 +52,7 @@ struct SettingsSheet: View {
                         
                         if (isInGame) {
                             Text("Difficulty cannot be changed during gameplay")
+                                .foregroundColor(.gray)
                         }
                     } header: {
                         Text("Difficulty")
@@ -66,12 +67,13 @@ struct SettingsSheet: View {
                         
                         if (isInGame) {
                             Text("Data cannot be reset during gameplay")
+                                .foregroundColor(.gray)
                         }
                     }
                 }
             }
             .toolbar {
-                SheetToolbar()
+                SheetToolbar(isInGame: isInGame)
             }
             
             // Needs to be set again when changing the dark mode setting on a sheet
