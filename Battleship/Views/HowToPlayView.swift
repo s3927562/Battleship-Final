@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HowToPlaySheet: View {
+struct HowToPlayView: View {
     var body: some View {
         // NavigationStack for back button
         NavigationStack {
@@ -23,6 +23,6 @@ struct HowToPlaySheet: View {
 
 struct HowToPlaySheet_Previews: PreviewProvider {
     static var previews: some View {
-        HowToPlaySheet()
+        HowToPlayView()
     }
 }

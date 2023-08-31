@@ -14,7 +14,7 @@ import Foundation
 //  Fleet: Collection of Ships
 //  'class' to mutate ships[].parts[].isHit
 
-class Fleet {
+class Fleet: Codable {
     // All fleets in Battleship have the same ships
     static let shipLengths = [2, 3, 3, 4, 5]
     var ships: [Ship] = []

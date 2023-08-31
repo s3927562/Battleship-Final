@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ocean {
+struct Ocean: Codable {
     var dimension = 0
     
     // Find all places that a Ship of a certain length can fit

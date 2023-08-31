@@ -10,7 +10,7 @@ import Foundation
 //  ShipPart: A part of a Ship with Coordinate and hit status
 //  'class' to mutate isHit
 
-class ShipPart {
+class ShipPart: Codable {
     let location: Coordinate
     var isHit = false
     

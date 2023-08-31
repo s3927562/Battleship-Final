@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct LeaderboardSheet: View {
+struct LeaderboardView: View {
     @State private var selectedDifficulty: Difficulty = .Easy
     @State private var selectedLeaderboard = Leaderboard()
     
@@ -67,8 +67,8 @@ struct LeaderboardSheet: View {
     }
 }
 
-struct LeaderboardSheet_Previews: PreviewProvider {
+struct LeaderboardView_Previews: PreviewProvider {
     static var previews: some View {
-        LeaderboardSheet()
+        LeaderboardView()
     }
 }

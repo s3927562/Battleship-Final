@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum OceanState {
+//  OceanState: Store the state of one block on the Ocean
+
+enum OceanState: Codable {
     case miss
     case unknown
     case partialHit

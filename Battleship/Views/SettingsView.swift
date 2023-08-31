@@ -10,7 +10,7 @@
 
 import SwiftUI
 
-struct SettingsSheet: View {
+struct SettingsView: View {
     // Storing dark mode settings
     @AppStorage("isDarkMode") private var isDarkMode = false
     
@@ -24,7 +24,10 @@ struct SettingsSheet: View {
     @State private var showAlert = false
     
     // Disable certain actions if shown during gameplay
-    var isInGame = false
+    @State var isInGame = false
+    
+    // Tracking save data deletion
+    @Binding var deleteSaveData: Bool
     
     var body: some View {
         // NavigationStack for back button
@@ -46,14 +49,9 @@ struct SettingsSheet: View {
                             }
                         }
                         .pickerStyle(.segmented)
-                        .disabled(isInGame)
                         
                         Text(selectedDifficulty.description)
-                        
-                        if (isInGame) {
-                            Text("Difficulty cannot be changed during gameplay")
-                                .foregroundColor(.gray)
-                        }
+                        Text("Changes will take effect in the next game")
                     } header: {
                         Text("Difficulty")
                     }
@@ -91,30 +89,14 @@ struct SettingsSheet: View {
             
             // Delete all leaderboard data files
             .onChange(of: isReset) { _ in
-                if isReset {
-                    for difficulty in Difficulty.allCases {
-                        let fileName = "\(difficulty.rawValue.lowercased()).json"
-                        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                            let file = dir.appendingPathComponent(fileName)
-                            if FileManager.default.fileExists(atPath: file.path) {
-                                do {
-                                    try FileManager.default.removeItem(at: file)
-                                } catch let error {
-                                    print(error)
-                                }
-                            }
-                        }
-                        isReset = false
-                    }
+                if (isReset) {
+                    deleteLeaderboardData()
+                    saveGameData(for: Game())
+                    isReset = false
+                    deleteSaveData = true
                 }
             }
             
         }
-    }
-}
-
-struct SettingsSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsSheet()
     }
 }

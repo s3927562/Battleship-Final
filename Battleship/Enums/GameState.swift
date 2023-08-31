@@ -7,10 +7,15 @@
 
 import Foundation
 
-enum GameState: Identifiable {
+//  GameState: Store the status of the current game
+// Identifiable for win/lose sheet in GameView
+
+enum GameState: Identifiable, Codable {
+    case setup
     case lose
     case ongoing
     case win
+    case exit
     
     var id: UUID { UUID() }
 }

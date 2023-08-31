@@ -13,7 +13,7 @@ import Foundation
 //  Ship: Collection of ShipParts
 //  'class' to mutate parts[].isHit
 
-class Ship {
+class Ship: Codable {
     var parts: [ShipPart] = []
     var isSunk: Bool {
         // The Ship will be sunk if all ShipParts are hit

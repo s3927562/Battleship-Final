@@ -14,7 +14,7 @@ import Foundation
 //  Needs to be Hashable to convert Array(Coordinate) to Set(Coordinate) in Fleet.deploy(on ocean: Ocean)
 //  and automatically synthesize conformance ('==' operator)
 
-struct Coordinate: Hashable {
+struct Coordinate: Hashable, Codable {
     let x: Int
     let y: Int
     

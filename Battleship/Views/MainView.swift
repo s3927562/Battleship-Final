@@ -20,6 +20,9 @@ struct MainView: View {
     // Storing dark mode settings
     @AppStorage("isDarkMode") private var isDarkMode = false
     
+    // Read saved game data if any
+    @State private var game: Game = readGameData() ?? Game()
+    
     // Showing alert
     @State private var showAlert = false
     
@@ -30,6 +33,12 @@ struct MainView: View {
         
         var id: String { rawValue }
     }
+    
+    // Tracking save data changes
+    @State private var newSaveData = false
+    
+    // Disable continue button if no save data
+    @State private var disableContinue = true
     
     var body: some View {
         NavigationStack {
@@ -52,21 +61,21 @@ struct MainView: View {
                     Spacer()
                     
                     NavigationLink {
-                        GameView()
+                        GameView(newSaveData: $newSaveData)
                     } label: {
                         Text("New Game")
                             .frame(maxWidth: .infinity, maxHeight: 34)
                     }
                     .buttonStyle(.borderedProminent)
                     
-                    Button {
-                        
+                    NavigationLink {
+                        GameView(savedGame: game, newSaveData: $newSaveData)
                     } label: {
                         Text("Continue")
                             .frame(maxWidth: .infinity, maxHeight: 34)
                     }
                     .buttonStyle(.bordered)
-                    .disabled(true)
+                    .disabled(disableContinue)
                     
                     Button {
                         showSheet = .leaderboard
@@ -112,9 +121,30 @@ struct MainView: View {
         
         .onAppear {
             // Settings dark mode on first launch
-            if isFirstLaunch {
+            if (isFirstLaunch) {
                 isDarkMode = colorScheme == .dark ? true : false
                 isFirstLaunch = false
+            }
+            
+            // Enable 'Continue' button if there is save data
+            if (game.state == .ongoing) {
+                disableContinue = false
+            } else {
+                disableContinue = true
+            }
+        }
+        
+        // Detect change in save data
+        .onChange(of: newSaveData) { _ in
+            if (newSaveData) {
+                game = readGameData() ?? Game()
+                newSaveData = false
+            }
+            
+            if (game.state == .ongoing) {
+                disableContinue = false
+            } else {
+                disableContinue = true
             }
         }
         
@@ -130,9 +160,9 @@ struct MainView: View {
         // Sheet views
         .sheet(item: $showSheet) { sheet in
             switch sheet {
-            case .leaderboard: LeaderboardSheet()
-            case .settings: SettingsSheet()
-            case .howToPlay: HowToPlaySheet()
+            case .leaderboard: LeaderboardView()
+            case .settings: SettingsView(deleteSaveData: $newSaveData)
+            case .howToPlay: HowToPlayView()
             }
         }
     }

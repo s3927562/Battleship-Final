@@ -9,6 +9,8 @@
 
 import Foundation
 
+//  Loading leaderboard data files into dictionaries
+
 var leaderboardDict: [String: Leaderboard] {
     var dict: [String: Leaderboard] = [:]
     
@@ -19,7 +21,7 @@ var leaderboardDict: [String: Leaderboard] {
             let file = dir.appendingPathComponent(fileName)
             
             // Copy default leaderboard data if leaderboard data file doesn't exist
-            if !FileManager.default.fileExists(atPath: file.path) {
+            if (!FileManager.default.fileExists(atPath: file.path)) {
                 if let defaultFile = Bundle.main.url(forResource: "default.json", withExtension: nil) {
                     do {
                         try FileManager.default.copyItem(at: defaultFile, to: file)
@@ -43,4 +45,22 @@ var leaderboardDict: [String: Leaderboard] {
     }
     
     return dict
+}
+
+// Delete Leaderboard Data from Settings
+
+func deleteLeaderboardData () {
+    for difficulty in Difficulty.allCases {
+        let fileName = "\(difficulty.rawValue.lowercased()).json"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let file = dir.appendingPathComponent(fileName)
+            if FileManager.default.fileExists(atPath: file.path) {
+                do {
+                    try FileManager.default.removeItem(at: file)
+                } catch let error {
+                    print(error)
+                }
+            }
+        }
+    }
 }

@@ -14,7 +14,7 @@ struct Leaderboard: Codable {
     var total = 0
     var win = 0
     var winPercentage: String {
-        if total > 0 {
+        if (total > 0) {
             return String(format: "%.2f", Double(win) / Double(total) * 100)
         }
         

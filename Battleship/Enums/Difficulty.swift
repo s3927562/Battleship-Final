@@ -8,6 +8,8 @@
 
 import Foundation
 
+//  Difficulty: Store game settings related to difficulty
+
 enum Difficulty: String, CaseIterable {
     case Easy
     case Medium
