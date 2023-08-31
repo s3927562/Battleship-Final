@@ -1,14 +1,21 @@
-//
-//  Difficulty.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 27/08/2023.
-//
-//  https://sarunw.com/posts/swiftui-picker-enum/
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 27/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ How to create SwiftUI Picker from Enum | Sarunw: https://sarunw.com/posts/swiftui-picker-enum
+ */
 
 import Foundation
 
 //  Difficulty: Store game settings related to difficulty
+//  CaseIterable: ForEach view
 
 enum Difficulty: String, CaseIterable {
     case Easy
@@ -28,6 +35,6 @@ enum Difficulty: String, CaseIterable {
     }
     
     var description: String {
-        "\(self.dimension) x \(self.dimension) Grid, Maximum \(moveLimit) moves"
+        "\(self.dimension) x \(self.dimension) Grid, Maximum \(moveLimit) Moves"
     }
 }

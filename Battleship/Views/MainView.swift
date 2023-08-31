@@ -1,12 +1,16 @@
-//
-//  ContentView.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 26/08/2023.
-//
-//  https://www.avanderlee.com/swiftui/presenting-sheets/
-//  https://stackoverflow.com/questions/57517803/how-to-remove-the-default-navigation-bar-space-in-swiftui-navigationview
-//  https://developer.apple.com/forums/thread/719989
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 26/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ Sheets in SwiftUI explained with code examples - SwiftLee: https://www.avanderlee.com/swiftui/presenting-sheets
+ */
 
 import SwiftUI
 

@@ -1,13 +1,20 @@
-//
-//  Fleet.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 28/08/2023.
-//
-//  https://en.wikipedia.org/wiki/Battleship_(game)#Description
-//  https://developer.apple.com/documentation/swift/array/map(_:)-87c4d
-//  https://developer.apple.com/documentation/swift/array/joined(separator:)-7uber
-//  https://developer.apple.com/documentation/swift/array/first(where:)
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 28/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ Battleship (game) - Wikipedia: https://en.wikipedia.org/wiki/Battleship_(game)
+ Set | Apple Developer Documentation: https://developer.apple.com/documentation/swift/set
+ map(_:) | Apple Developer Documentation: https://developer.apple.com/documentation/swift/array/map(_:)-87c4d
+ joined(separator:) | Apple Developer Documentation: https://developer.apple.com/documentation/swift/array/joined(separator:)-7uber
+ first(where:) | Apple Developer Documentation: https://developer.apple.com/documentation/swift/array/first(where:)
+ */
 
 import Foundation
 
@@ -29,7 +36,6 @@ class Fleet: Codable {
         for shipLength in Fleet.shipLengths {
             // Find all locations that can fit a Ship of certain length without intersecting any other Ships
             // i.e., the array of intersections is empty
-            
             let fleetCoordinates = self.occupy()
             let possibleLocationsWithIntersect = ocean.possibleLocations(for: shipLength)
             let possibleLocations = possibleLocationsWithIntersect.filter { Set($0).intersection(fleetCoordinates).isEmpty }
@@ -48,7 +54,7 @@ class Fleet: Codable {
         
         return true
     }
-
+    
     // Obtain all Coordinates the Ship occupy
     func occupy() -> [Coordinate] {
         let coordinates = self.ships.map { $0.occupy() }

@@ -1,12 +1,17 @@
-//
-//  SettingsView.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 26/08/2023.
-//
-//  https://blog.logrocket.com/building-forms-swiftui-comprehensive-guide/#converting-components-form
-//  https://sarunw.com/posts/swiftui-form-picker-styles/
-//  https://www.swiftyplace.com/blog/file-manager-in-swift-reading-writing-and-deleting-files-and-directories
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 26/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ Building forms with SwiftUI: A comprehensive guide - LogRocket Blog: https://blog.logrocket.com/building-forms-swiftui-comprehensive-guide
+ 4 Picker styles in SwiftUI Form | Sarunw: https://sarunw.com/posts/swiftui-form-picker-styles
+ */
 
 import SwiftUI
 
@@ -17,17 +22,18 @@ struct SettingsView: View {
     // Storing game difficulty settings
     @AppStorage("selectedDifficulty") private var selectedDifficulty: Difficulty = .Easy
     
-    // Deletes all leaderboard data when true
-    @State private var isReset = false
+    // Storing volume settings
+    @AppStorage("volume") private var volume = 100.0
     
     // Showing alert
     @State private var showAlert = false
     
-    // Disable certain actions if shown during gameplay
-    @State var isInGame = false
-    
-    // Tracking save data deletion
+    // Deletes all leaderboard data when true
+    @State var isReset = false
     @Binding var deleteSaveData: Bool
+    
+    // Disable certain actions if shown during gameplay
+    var isInGame = false
     
     var body: some View {
         // NavigationStack for back button
@@ -51,9 +57,16 @@ struct SettingsView: View {
                         .pickerStyle(.segmented)
                         
                         Text(selectedDifficulty.description)
-                        Text("Changes will take effect in the next game")
+                        Text("Changes will take effect in the next new game")
                     } header: {
                         Text("Difficulty")
+                    }
+                    
+                    // Volume
+                    Section {
+                        Slider(value: $volume, in: 0...100, step: 1)
+                    } header: {
+                        Text("Volume")
                     }
                     
                     // Button for deleting leaderboard data files
@@ -70,6 +83,8 @@ struct SettingsView: View {
                     }
                 }
             }
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 SheetToolbar(isInGame: isInGame)
             }
@@ -87,16 +102,15 @@ struct SettingsView: View {
                 Text("This action cannot be undone")
             }
             
-            // Delete all leaderboard data files
+            // Delete all leaderboard and game data files
             .onChange(of: isReset) { _ in
                 if (isReset) {
                     deleteLeaderboardData()
                     saveGameData(for: Game())
-                    isReset = false
                     deleteSaveData = true
+                    isReset = false
                 }
             }
-            
         }
     }
 }

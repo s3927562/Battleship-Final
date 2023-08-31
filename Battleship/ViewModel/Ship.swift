@@ -1,12 +1,18 @@
-//
-//  Ship.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 28/08/2023.
-//
-//  https://developer.apple.com/documentation/swift/array/map(_:)-87c4d
-//  https://developer.apple.com/documentation/swift/array/contains(_:)
-//  https://developer.apple.com/documentation/swift/array/first(where:)
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 28/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ map(_:) | Apple Developer Documentation: https://developer.apple.com/documentation/swift/array/map(_:)-87c4d
+ contains(_:) | Apple Developer Documentation: https://developer.apple.com/documentation/swift/array/contains(_:)
+ first(where:) | Apple Developer Documentation: https://developer.apple.com/documentation/swift/array/first(where:)
+ */
 
 import Foundation
 

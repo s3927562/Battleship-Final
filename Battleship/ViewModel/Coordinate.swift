@@ -1,12 +1,16 @@
-//
-//  Coordinate.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 28/08/2023.
-//
-//  https://developer.apple.com/documentation/swift/set
-//  https://github.com/apple/swift-evolution/blob/main/proposals/0185-synthesize-equatable-hashable.md
-//  https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 28/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ swift-evolution/proposals/0185-synthesize-equatable-hashable.md at main · apple/swift-evolution · GitHub: https://github.com/apple/swift-evolution/blob/main/proposals/0185-synthesize-equatable-hashable.md
+ */
 
 import Foundation
 

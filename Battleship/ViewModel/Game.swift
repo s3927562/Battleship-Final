@@ -1,10 +1,16 @@
-//
-//  Game.swift
-//  Battleship
-//
-//  Created by Tung Tran Thanh on 28/08/2023.
-//
-//  https://www.hackingwithswift.com/books/ios-swiftui/adding-codable-conformance-for-published-properties
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Tran Thanh Tung
+ ID: s3927562
+ Created  date: 28/08/2023
+ Last modified: 31/08/2023
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
+ Adding Codable conformance for @Published properties - a free Hacking with iOS: SwiftUI Edition tutorial: https://www.hackingwithswift.com/books/ios-swiftui/adding-codable-conformance-for-published-properties
+ */
 
 import Foundation
 
@@ -56,13 +62,16 @@ class Game: ObservableObject, Codable {
             
             // Mark the corresponding oceanState
             if (ship.isSunk) {
+                playSFX("shootFullHit")
                 for location in ship.occupy() {
                     oceanStates[location.x][location.y] = .fullHit
                 }
             } else {
+                playSFX("shootPartialHit")
                 oceanStates[location.x][location.y] = .partialHit
             }
         } else {
+            playSFX("shootMiss")
             oceanStates[location.x][location.y] = .miss
         }
         
@@ -75,8 +84,10 @@ class Game: ObservableObject, Codable {
     func updateState() {
         if (self.fleet.isDestroyed) {
             self.state = .win
+            playSFX("gameWin")
         } else if (moveCount >= moveLimit) {
             self.state = .lose
+            playSFX("gameLose")
         } else {
             self.state = .ongoing
         }
