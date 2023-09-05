@@ -15,7 +15,6 @@
 import Foundation
 
 // Read and write game data to UserDefaults
-
 func saveGameData(for game: Game) {
     let encoder = JSONEncoder()
     if let encoded = try? encoder.encode(game) {

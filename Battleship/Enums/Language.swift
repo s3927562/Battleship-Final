@@ -13,13 +13,20 @@
 import Foundation
 
 enum Language: String, CaseIterable {
-    case en
-    case vn
+    case enUS
+    case viVN
+    
+    var code: String {
+        switch self {
+        case .enUS: return "en-US"
+        case .viVN: return "vi-VN"
+        }
+    }
     
     var textValue: String {
         switch self {
-        case .en: return "English"
-        case .vn: return "Tiếng Việt"
+        case .enUS: return "English"
+        case .viVN: return "Tiếng Việt"
         }
     }
 }

@@ -19,28 +19,37 @@ struct LanguageSection: View {
     var body: some View {
         // Languages
         Section {
-            //            Picker("Language", selection: $language) {
-            //                ForEach(Language.allCases.sorted { $0.rawValue < $1.rawValue }, id: \.self) {
-            //                    Text($0.textValue)
-            //                }
-            //            }
-            Button {
-                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-            } label: {
-                Text("Open Settings app")
+            //            if (NSLocale.preferredLanguages.count == 1) {
+            Picker("Language", selection: $language) {
+                ForEach(Language.allCases.sorted { $0.rawValue < $1.rawValue }, id: \.self) {
+                    Text($0.textValue)
+                }
             }
-            Text("Changing the language will close the app")
+            Text("Changes will take effect from the next launch")
+            //            } else {
+            //                Button {
+            //                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            //                } label: {
+            //                    Text("Open Settings app")
+            //                }
+            //                Text("Changing the language will close the app")
+            //            }
         } header: {
             Text("Language")
+        }
+        
+        .onChange(of: language) { _ in
+            // Set display language
+            UserDefaults.standard.set([language.code], forKey: "AppleLanguages")
         }
     }
 }
 
 struct LanguageSection_Previews: PreviewProvider {
-    @AppStorage("appLang") private static var appLang: Language = .en
+    @AppStorage("language") private static var language: Language = .enUS
     static var previews: some View {
         Form {
-            LanguageSection(language: $appLang)
+            LanguageSection(language: $language)
         }
     }
 }

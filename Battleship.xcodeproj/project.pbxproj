@@ -40,7 +40,7 @@
 		145A7C632AA7180E00499A69 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C622AA7180E00499A69 /* Language.swift */; };
 		146D08E52AA052BF00F0533C /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08E42AA052BF00F0533C /* GameData.swift */; };
 		146D08E92AA0A07700F0533C /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08E82AA0A07700F0533C /* Achievement.swift */; };
-		146D08EC2AA0BB8E00F0533C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */; };
+		146D08EC2AA0BB8E00F0533C /* AVAudioPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08EB2AA0BB8E00F0533C /* AVAudioPlayers.swift */; };
 		146D08EE2AA0BC6D00F0533C /* gameWin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08ED2AA0BC6D00F0533C /* gameWin.mp3 */; };
 		146D08F02AA0BC9400F0533C /* gameLose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08EF2AA0BC9400F0533C /* gameLose.mp3 */; };
 		146D08F22AA0C33E00F0533C /* shootMiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08F12AA0C33E00F0533C /* shootMiss.mp3 */; };
@@ -91,7 +91,7 @@
 		145A7C622AA7180E00499A69 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		146D08E42AA052BF00F0533C /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		146D08E82AA0A07700F0533C /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		146D08EB2AA0BB8E00F0533C /* AVAudioPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayers.swift; sourceTree = "<group>"; };
 		146D08ED2AA0BC6D00F0533C /* gameWin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameWin.mp3; sourceTree = "<group>"; };
 		146D08EF2AA0BC9400F0533C /* gameLose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameLose.mp3; sourceTree = "<group>"; };
 		146D08F12AA0C33E00F0533C /* shootMiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shootMiss.mp3; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		146D08EA2AA0BAFB00F0533C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */,
+				146D08EB2AA0BB8E00F0533C /* AVAudioPlayers.swift */,
 				145A7C4C2AA6ECFE00499A69 /* mainLoop.aiff */,
 				146D08F12AA0C33E00F0533C /* shootMiss.mp3 */,
 				14AC513E2AA74CEA00123414 /* shootPartialHit.mp3 */,
@@ -363,7 +363,7 @@
 				146D09062AA0D0CE00F0533C /* PlayGrid.swift in Sources */,
 				141195282A9CC12100745425 /* Fleet.swift in Sources */,
 				1401C9712A99F2F400DAD4CA /* BattleshipApp.swift in Sources */,
-				146D08EC2AA0BB8E00F0533C /* AudioPlayer.swift in Sources */,
+				146D08EC2AA0BB8E00F0533C /* AVAudioPlayers.swift in Sources */,
 				1452C4952A9B39AF00F351A6 /* Difficulty.swift in Sources */,
 				141195222A9CBF5700745425 /* ShipPart.swift in Sources */,
 				145A7C532AA6F01B00499A69 /* VolumeSection.swift in Sources */,
@@ -467,6 +467,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -520,6 +521,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

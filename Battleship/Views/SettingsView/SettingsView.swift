@@ -27,7 +27,7 @@ struct SettingsView: View {
     @AppStorage("volumeSFX") private var volumeSFX = 37.5
     
     // Storing display language
-    @AppStorage("appLang") private var appLang: Language = .en
+    @AppStorage("language") private var language: Language = .enUS
     
     // Deletes all leaderboard data when true
     @State var isReset = false
@@ -43,7 +43,7 @@ struct SettingsView: View {
                 Form {
                     AppearanceSection(isDarkMode: $isDarkMode)
                     DifficultySection(difficulty: $selectedDifficulty)
-                    LanguageSection(language: $appLang)
+                    LanguageSection(language: $language)
                     VolumeSection(volumeBGM: $volumeBGM, volumeSFX: $volumeSFX)
                     ResetSection(isReset: $isReset, isInGame: isInGame)
                 }
