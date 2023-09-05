@@ -5,7 +5,7 @@
  Assessment: Assignment 2
  Author: Tran Thanh Tung
  ID: s3927562
- Created  date: 26/08/2023
+ Created  date: 05/09/2023
  Last modified: 31/08/2023
  Acknowledgement:
  RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
@@ -18,7 +18,6 @@
 import Foundation
 
 //  Loading leaderboard data files into dictionaries
-
 var leaderboardDict: [String: Leaderboard] {
     var dict: [String: Leaderboard] = [:]
     
@@ -110,7 +109,6 @@ func saveLeaderboardData(username: String, game: Game, difficulty: Difficulty) {
 }
 
 // Delete Leaderboard Data from Settings
-
 func deleteLeaderboardData() {
     for difficulty in Difficulty.allCases {
         let fileName = "\(difficulty.rawValue.lowercased()).json"
