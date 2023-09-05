@@ -192,3 +192,10 @@ struct GameView: View {
         }
     }
 }
+
+struct GameView_Previews: PreviewProvider {
+    @State private static var newSaveData = false
+    static var previews: some View {
+        GameView(newSaveData: $newSaveData)
+    }
+}

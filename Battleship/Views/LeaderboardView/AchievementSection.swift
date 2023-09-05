@@ -68,3 +68,12 @@ struct AchievementSection: View {
         }
     }
 }
+
+struct AchievementSection_Previews: PreviewProvider {
+    @State private static var selectedLeaderboard = leaderboardDict["Easy"]!
+    static var previews: some View {
+        Form {
+            AchievementSection(leaderboard: $selectedLeaderboard)
+        }
+    }
+}

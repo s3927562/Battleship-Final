@@ -24,3 +24,12 @@ struct AppearanceSection: View {
         }
     }
 }
+
+struct AppearanceSection_Previews: PreviewProvider {
+    @AppStorage("isDarkMode") private static var isDarkMode = false
+    static var previews: some View {
+        Form {
+            AppearanceSection(isDarkMode: $isDarkMode)
+        }
+    }
+}

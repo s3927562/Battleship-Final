@@ -33,3 +33,12 @@ struct LanguageSection: View {
         }
     }
 }
+
+struct LanguageSection_Previews: PreviewProvider {
+    @AppStorage("appLang") private static var appLang: Language = .en
+    static var previews: some View {
+        Form {
+            LanguageSection(language: $appLang)
+        }
+    }
+}

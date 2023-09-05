@@ -44,3 +44,12 @@ struct ResetSection: View {
         }
     }
 }
+
+struct ResetSection_Previews: PreviewProvider {
+    @State private static var isReset = false
+    static var previews: some View {
+        Form {
+            ResetSection(isReset: $isReset)
+        }
+    }
+}

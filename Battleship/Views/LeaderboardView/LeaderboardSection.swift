@@ -31,3 +31,12 @@ struct LeaderboardSection: View {
         }
     }
 }
+
+struct LeaderboardSection_Previews: PreviewProvider {
+    @State private static var selectedLeaderboard = leaderboardDict["Easy"]!
+    static var previews: some View {
+        Form {
+            LeaderboardSection(leaderboard: $selectedLeaderboard)
+        }
+    }
+}

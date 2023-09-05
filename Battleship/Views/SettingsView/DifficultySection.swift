@@ -32,3 +32,12 @@ struct DifficultySection: View {
         }
     }
 }
+
+struct DifficultySection_Previews: PreviewProvider {
+    @AppStorage("selectedDifficulty") private static var selectedDifficulty: Difficulty = .Easy
+    static var previews: some View {
+        Form {
+            DifficultySection(difficulty: $selectedDifficulty)
+        }
+    }
+}

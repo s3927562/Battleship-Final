@@ -77,3 +77,10 @@ struct SettingsView: View {
         }
     }
 }
+
+struct SettingsView_Previews: PreviewProvider {
+    @State private static var deleteSaveData = false
+    static var previews: some View {
+        SettingsView(deleteSaveData: $deleteSaveData)
+    }
+}

@@ -29,3 +29,12 @@ struct DifficultyPicker: View {
         }
     }
 }
+
+struct DifficultyPicker_Previews: PreviewProvider {
+    @State private static var selectedDifficulty: Difficulty = .Easy
+    static var previews: some View {
+        Form {
+            DifficultyPicker(difficulty: $selectedDifficulty)
+        }
+    }
+}

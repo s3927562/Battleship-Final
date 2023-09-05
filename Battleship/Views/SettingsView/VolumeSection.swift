@@ -34,3 +34,13 @@ struct VolumeSection: View {
         }
     }
 }
+
+struct VolumeSection_Previews: PreviewProvider {
+    @AppStorage("volumeBGM") private static var volumeBGM = 25.0
+    @AppStorage("volumeSFX") private static var volumeSFX = 37.5
+    static var previews: some View {
+        Form {
+            VolumeSection(volumeBGM: $volumeBGM, volumeSFX: $volumeSFX)
+        }
+    }
+}

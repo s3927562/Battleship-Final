@@ -25,3 +25,12 @@ struct StatisticSection: View {
         }
     }
 }
+
+struct StatisticSection_Previews: PreviewProvider {
+    @State private static var selectedLeaderboard = leaderboardDict["Easy"]!
+    static var previews: some View {
+        Form {
+            StatisticSection(leaderboard: $selectedLeaderboard)
+        }
+    }
+}
