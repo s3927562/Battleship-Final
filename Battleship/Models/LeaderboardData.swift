@@ -17,7 +17,7 @@
 
 import Foundation
 
-//  Loading leaderboard data files into dictionaries
+// Loading leaderboard data files into dictionaries
 var leaderboardDict: [String: Leaderboard] {
     var dict: [String: Leaderboard] = [:]
     
