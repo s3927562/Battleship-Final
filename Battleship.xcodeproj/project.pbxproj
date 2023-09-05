@@ -29,6 +29,15 @@
 		1452C4952A9B39AF00F351A6 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4942A9B39AF00F351A6 /* Difficulty.swift */; };
 		1452C4992A9B5DD400F351A6 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4982A9B5DD400F351A6 /* Score.swift */; };
 		1452C49B2A9B5DEC00F351A6 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */; };
+		145A7C4D2AA6ECFE00499A69 /* mainLoop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 145A7C4C2AA6ECFE00499A69 /* mainLoop.aiff */; };
+		145A7C4F2AA6EF3F00499A69 /* AppearanceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C4E2AA6EF3F00499A69 /* AppearanceSection.swift */; };
+		145A7C512AA6EFB900499A69 /* DifficultySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C502AA6EFB900499A69 /* DifficultySection.swift */; };
+		145A7C532AA6F01B00499A69 /* VolumeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C522AA6F01B00499A69 /* VolumeSection.swift */; };
+		145A7C552AA6F0DC00499A69 /* ResetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C542AA6F0DC00499A69 /* ResetSection.swift */; };
+		145A7C582AA6FCDF00499A69 /* Battleship-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 145A7C562AA6FCDF00499A69 /* Battleship-InfoPlist.strings */; };
+		145A7C5B2AA6FCDF00499A69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 145A7C592AA6FCDF00499A69 /* Localizable.strings */; };
+		145A7C5F2AA711AA00499A69 /* LanguageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C5E2AA711AA00499A69 /* LanguageSection.swift */; };
+		145A7C632AA7180E00499A69 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A7C622AA7180E00499A69 /* Language.swift */; };
 		146D08E52AA052BF00F0533C /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08E42AA052BF00F0533C /* GameData.swift */; };
 		146D08E92AA0A07700F0533C /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08E82AA0A07700F0533C /* Achievement.swift */; };
 		146D08EC2AA0BB8E00F0533C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */; };
@@ -71,6 +80,15 @@
 		1452C4942A9B39AF00F351A6 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		1452C4982A9B5DD400F351A6 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		1452C49A2A9B5DEC00F351A6 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		145A7C4C2AA6ECFE00499A69 /* mainLoop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = mainLoop.aiff; sourceTree = "<group>"; };
+		145A7C4E2AA6EF3F00499A69 /* AppearanceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSection.swift; sourceTree = "<group>"; };
+		145A7C502AA6EFB900499A69 /* DifficultySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySection.swift; sourceTree = "<group>"; };
+		145A7C522AA6F01B00499A69 /* VolumeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSection.swift; sourceTree = "<group>"; };
+		145A7C542AA6F0DC00499A69 /* ResetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetSection.swift; sourceTree = "<group>"; };
+		145A7C572AA6FCDF00499A69 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = "vi.lproj/Battleship-InfoPlist.strings"; sourceTree = "<group>"; };
+		145A7C5A2AA6FCDF00499A69 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		145A7C5E2AA711AA00499A69 /* LanguageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSection.swift; sourceTree = "<group>"; };
+		145A7C622AA7180E00499A69 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		146D08E42AA052BF00F0533C /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		146D08E82AA0A07700F0533C /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -103,6 +121,8 @@
 		1401C9642A99F2F400DAD4CA = {
 			isa = PBXGroup;
 			children = (
+				145A7C592AA6FCDF00499A69 /* Localizable.strings */,
+				145A7C562AA6FCDF00499A69 /* Battleship-InfoPlist.strings */,
 				1401C96F2A99F2F400DAD4CA /* Battleship */,
 				1401C96E2A99F2F400DAD4CA /* Products */,
 			);
@@ -183,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */,
+				145A7C4C2AA6ECFE00499A69 /* mainLoop.aiff */,
 				146D08F12AA0C33E00F0533C /* shootMiss.mp3 */,
 				146D08F32AA0C35A00F0533C /* shootPartialHit.mp3 */,
 				146D08F52AA0C36C00F0533C /* shootFullHit.mp3 */,
@@ -208,6 +229,11 @@
 			isa = PBXGroup;
 			children = (
 				1401C98E2A9A0D5800DAD4CA /* SettingsView.swift */,
+				145A7C4E2AA6EF3F00499A69 /* AppearanceSection.swift */,
+				145A7C502AA6EFB900499A69 /* DifficultySection.swift */,
+				145A7C5E2AA711AA00499A69 /* LanguageSection.swift */,
+				145A7C522AA6F01B00499A69 /* VolumeSection.swift */,
+				145A7C542AA6F0DC00499A69 /* ResetSection.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -237,6 +263,7 @@
 				1411952D2A9CC5F300745425 /* OceanState.swift */,
 				1411952F2A9CD00200745425 /* GameState.swift */,
 				146D08E82AA0A07700F0533C /* Achievement.swift */,
+				145A7C622AA7180E00499A69 /* Language.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -283,6 +310,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 1401C9642A99F2F400DAD4CA;
 			productRefGroup = 1401C96E2A99F2F400DAD4CA /* Products */;
@@ -301,8 +329,11 @@
 			files = (
 				1401C9782A99F2F600DAD4CA /* Preview Assets.xcassets in Resources */,
 				146D08F02AA0BC9400F0533C /* gameLose.mp3 in Resources */,
+				145A7C5B2AA6FCDF00499A69 /* Localizable.strings in Resources */,
 				1401C9752A99F2F600DAD4CA /* Assets.xcassets in Resources */,
 				146D08F62AA0C36C00F0533C /* shootFullHit.mp3 in Resources */,
+				145A7C4D2AA6ECFE00499A69 /* mainLoop.aiff in Resources */,
+				145A7C582AA6FCDF00499A69 /* Battleship-InfoPlist.strings in Resources */,
 				146D08EE2AA0BC6D00F0533C /* gameWin.mp3 in Resources */,
 				146D08F42AA0C35A00F0533C /* shootPartialHit.mp3 in Resources */,
 				146D08F22AA0C33E00F0533C /* shootMiss.mp3 in Resources */,
@@ -320,6 +351,7 @@
 				146D08FD2AA0CDB600F0533C /* AchievementSection.swift in Sources */,
 				146D09032AA0CFF600F0533C /* SolutionGrid.swift in Sources */,
 				1452C49B2A9B5DEC00F351A6 /* Leaderboard.swift in Sources */,
+				145A7C552AA6F0DC00499A69 /* ResetSection.swift in Sources */,
 				1401C98F2A9A0D5800DAD4CA /* SettingsView.swift in Sources */,
 				1411952E2A9CC5F300745425 /* OceanState.swift in Sources */,
 				1452C4932A9B381B00F351A6 /* SheetToolbar.swift in Sources */,
@@ -334,14 +366,19 @@
 				146D08EC2AA0BB8E00F0533C /* AudioPlayer.swift in Sources */,
 				1452C4952A9B39AF00F351A6 /* Difficulty.swift in Sources */,
 				141195222A9CBF5700745425 /* ShipPart.swift in Sources */,
+				145A7C532AA6F01B00499A69 /* VolumeSection.swift in Sources */,
 				1401C9822A99F48E00DAD4CA /* LeaderboardData.swift in Sources */,
 				14DCB7982A9F806C0016B701 /* GameWinView.swift in Sources */,
 				146D08E52AA052BF00F0533C /* GameData.swift in Sources */,
 				146D08FB2AA0CD0000F0533C /* LeaderboardSection.swift in Sources */,
 				1411952A2A9CC20800745425 /* Ocean.swift in Sources */,
 				14DCB79A2A9F80790016B701 /* GameLoseView.swift in Sources */,
+				145A7C632AA7180E00499A69 /* Language.swift in Sources */,
 				146D08E92AA0A07700F0533C /* Achievement.swift in Sources */,
+				145A7C5F2AA711AA00499A69 /* LanguageSection.swift in Sources */,
 				1411952C2A9CC44C00745425 /* Game.swift in Sources */,
+				145A7C4F2AA6EF3F00499A69 /* AppearanceSection.swift in Sources */,
+				145A7C512AA6EFB900499A69 /* DifficultySection.swift in Sources */,
 				146D08F92AA0CBAE00F0533C /* StatisticSection.swift in Sources */,
 				1452C48C2A9B360500F351A6 /* HowToPlayView.swift in Sources */,
 				141195242A9CBFBE00745425 /* GameView.swift in Sources */,
@@ -351,6 +388,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		145A7C562AA6FCDF00499A69 /* Battleship-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				145A7C572AA6FCDF00499A69 /* vi */,
+			);
+			name = "Battleship-InfoPlist.strings";
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+		145A7C592AA6FCDF00499A69 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				145A7C5A2AA6FCDF00499A69 /* vi */,
+			);
+			name = Localizable.strings;
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1401C9792A99F2F600DAD4CA /* Debug */ = {

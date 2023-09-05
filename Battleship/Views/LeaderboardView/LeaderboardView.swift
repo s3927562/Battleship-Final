@@ -32,7 +32,7 @@ struct LeaderboardView: View {
                     AchievementSection(leaderboard: $selectedLeaderboard)
                 }
             }
-            .navigationTitle("Leaderboard and Statistics")
+            .navigationTitle("Leaderboards, Statistics & Achievements")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 SheetToolbar()

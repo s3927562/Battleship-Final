@@ -1,0 +1,171 @@
+/* No comment provided by engineer. */
+"???" = "???";
+
+/* No comment provided by engineer. */
+"%lld x %lld Grid, Maximum %lld Moves" = "Lưới %lld x %lld, Tối đa %lld nước đi";
+
+/* No comment provided by engineer. */
+"Achievements" = "Thành tích";
+
+/* No comment provided by engineer. */
+"Appearance" = "Giao diện";
+
+/* No comment provided by engineer. */
+"Back to Game" = "Quay về Trò chơi";
+
+/* No comment provided by engineer. */
+"Battleship" = "Tàu chiến";
+
+/* No comment provided by engineer. */
+"Better Luck Next Time" = "Chúc may mắn lần sau";
+
+/* No comment provided by engineer. */
+"BGM" = "Nhạc nền";
+
+/* No comment provided by engineer. */
+"Cancel" = "Huỷ";
+
+/* No comment provided by engineer. */
+"Changes will take effect from the next new game" = "Thay đổi sẽ có hiệu lực từ trò chơi mới tiếp theo";
+
+/* No comment provided by engineer. */
+"Changing the language will close the app" = "Thay đổi ngôn ngữ sẽ đóng ứng dụng";
+
+/* No comment provided by engineer. */
+"Continue" = "TIếp tục";
+
+/* No comment provided by engineer. */
+"Dark Mode" = "GIao diện Tối";
+
+/* No comment provided by engineer. */
+"Data cannot be reset during gameplay" = "Dữ liệu không thể bị xoá khi đang chơi";
+
+/* No comment provided by engineer. */
+"Difficulty" = "Độ khó";
+
+/* No comment provided by engineer. */
+"Don't Save" = "Không Lưu";
+
+/* No comment provided by engineer. */
+"Easy" = "Dễ";
+
+/* No comment provided by engineer. */
+"Game Over" = "Thua cuộc";
+
+/* No comment provided by engineer. */
+"Games Total" = "Trò chơi Tổng";
+
+/* No comment provided by engineer. */
+"Games Won" = "Trò chơi Thắng";
+
+/* No comment provided by engineer. */
+"Good Job" = "Tốt";
+
+/* No comment provided by engineer. */
+"Hard" = "Khó";
+
+/* No comment provided by engineer. */
+"How to Play" = "Hướng dẫn";
+
+/* No comment provided by engineer. */
+"In each game, a fleet will be deployed with 5 ships of the following size: 2, 3, 3, 4, 5.\r\n" = "Trong mỗi trò chơi, một hạm đội gồm 5 thuyền sẽ được triển khai với các kích cỡ: 2, 3, 3, 4, 5.\r\n";
+
+/* No comment provided by engineer. */
+"Information" = "Thông tin";
+
+/* No comment provided by engineer. */
+"Language" = "Ngôn ngữ";
+
+/* No comment provided by engineer. */
+"Leaderboard" = "Bảng xếp hạng";
+
+/* No comment provided by engineer. */
+"Leaderboards, Statistics & Achievements" = "Bảng xếp hạng, Thống kê & Thành tích";
+
+/* No comment provided by engineer. */
+"Lose a game" = "Thua một trò chơi";
+
+/* No comment provided by engineer. */
+"Main Menu" = "Màn hình Chính";
+
+/* No comment provided by engineer. */
+"Medium" = "Trung bình";
+
+/* No comment provided by engineer. */
+"Moves: %lld / %lld" = "Nước đi: %lld / %lld";
+
+/* No comment provided by engineer. */
+"Name" = "Tên";
+
+/* No comment provided by engineer. */
+"Name: Tran Thanh Tung\nStudent ID: s3927562\nProgram: BH120 - Bachelor of Engineering (Software Engineering) (Honours)" = "Tên: Trần Thanh Tùng\nSố hiệu Sinh viên: s3927562\nChương trình: BH120 - Kỹ sư (Kỹ thuật Phần mềm)";
+
+/* No comment provided by engineer. */
+"New Game" = "Trò chơi Mới";
+
+/* No comment provided by engineer. */
+"None" = "Trống";
+
+/* No comment provided by engineer. */
+"Open Settings app" = "Mở ứng dụng Cài đặt";
+
+/* No comment provided by engineer. */
+"Perfect Game" = "Trò chơi Hoàn hảo";
+
+/* No comment provided by engineer. */
+"Reset" = "Xoá";
+
+/* No comment provided by engineer. */
+"Reset All Data" = "Xoá toàn bộ dữ liệu";
+
+/* No comment provided by engineer. */
+"Save" = "Lưu";
+
+/* No comment provided by engineer. */
+"Score" = "Điểm";
+
+/* No comment provided by engineer. */
+"Settings" = "Cài đặt";
+
+/* No comment provided by engineer. */
+"SFX" = "Hiệu ứng";
+
+/* No comment provided by engineer. */
+"Statistics" = "Thống kê";
+
+/* No comment provided by engineer. */
+"Tapping on the button will shoot at the location and provide a hint to whether the shot hit a ship or not:" = "Khi ấn vào nút, bạn sẽ bắn vào toạ độ đó và hiển thị một gợi ý xem bạn có bắn trúng thuyền không:";
+
+/* No comment provided by engineer. */
+"The field is a square grid with the dimension based on the difficulty. Each location is represented with a blank button." = "Khu biển là một lưới hình vuông với diện tích phụ thuộc vào độ khó. Mỗi toạ độ được hiển thị là một nút vuông trống.";
+
+/* No comment provided by engineer. */
+"The score is calculated by adding 1 to the remaining move count." = "Số điểm sẽ được tính bằng cách lấy số nước đi còn lại cộng 1.";
+
+/* No comment provided by engineer. */
+"The shot did not hit anything." = "Không trúng.";
+
+/* No comment provided by engineer. */
+"The shot hit a ship and the ship has sunk." = "Trúng và thuyền đã chìm.";
+
+/* No comment provided by engineer. */
+"The shot hit a ship, but the ship has not sunk." = "Trúng nhưng thuyền chưa chìm.";
+
+/* No comment provided by engineer. */
+"This action cannot be undone" = "Hành động này không thể hoàn tác";
+
+/* No comment provided by engineer. */
+"Volume" = "Âm thanh";
+
+/* No comment provided by engineer. */
+"Win a game" = "Thắng một trò chơi";
+
+/* No comment provided by engineer. */
+"Win a game without any miss" = "Thắng một trò chơi mà không bắn trượt";
+
+/* No comment provided by engineer. */
+"You must sink all ships before you run out of move. The move counter and limit is displayed at the bottom of the scren.\r\n" = "Bạn phải bắn chìm tất cả các thuyền trước khi hết nước đi. Số nước đi đã thực hiện và số nước đi tối đa được hiển thị ở phía dưới của màn hình.\r\n";
+
+/* No comment provided by engineer. */
+"You Won!" = "Thắng cuộc!";
+

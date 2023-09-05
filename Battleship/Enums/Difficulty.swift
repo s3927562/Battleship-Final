@@ -22,6 +22,14 @@ enum Difficulty: String, CaseIterable {
     case Medium
     case Hard
     
+    var textValue: String {
+        switch self {
+        case .Easy: return String(localized: "Easy")
+        case .Medium: return String(localized: "Medium")
+        case .Hard: return String(localized: "Hard")
+        }
+    }
+    
     var dimension: Int {
         switch self {
         case .Easy: return 6
@@ -35,6 +43,6 @@ enum Difficulty: String, CaseIterable {
     }
     
     var description: String {
-        "\(self.dimension) x \(self.dimension) Grid, Maximum \(moveLimit) Moves"
+        String(localized: "\(self.dimension) x \(self.dimension) Grid, Maximum \(moveLimit) Moves")
     }
 }

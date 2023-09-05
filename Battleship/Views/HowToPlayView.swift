@@ -104,7 +104,7 @@ struct HowToPlayView: View {
                 }
                 
                 HStack {
-                    Text("The score is calculated by subtracting the move count from move limit then adding 1.")
+                    Text("The score is calculated by adding 1 to the remaining move count.")
                     Spacer()
                 }
                 

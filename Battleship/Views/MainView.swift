@@ -6,7 +6,7 @@
  Author: Tran Thanh Tung
  ID: s3927562
  Created  date: 26/08/2023
- Last modified: 31/08/2023
+ Last modified: 05/09/2023
  Acknowledgement:
  RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
  Sheets in SwiftUI explained with code examples - SwiftLee: https://www.avanderlee.com/swiftui/presenting-sheets
@@ -23,6 +23,10 @@ struct MainView: View {
     
     // Storing dark mode settings
     @AppStorage("isDarkMode") private var isDarkMode = false
+    
+    // Setup volume settings for first launch
+    @AppStorage("volumeBGM") private var volumeBGM = 25.0
+    @AppStorage("volumeSFX") private var volumeSFX = 37.5
     
     // Read saved game data if any
     @State private var game: Game = readGameData() ?? Game()
@@ -84,7 +88,7 @@ struct MainView: View {
                     Button {
                         showSheet = .leaderboard
                     } label: {
-                        Text("Leaderboards & Statistics")
+                        Text("Leaderboards, Statistics & Achievements")
                             .frame(height: 34)
                     }
                     
@@ -131,11 +135,17 @@ struct MainView: View {
             }
             
             // Enable 'Continue' button if there is save data
-            if (game.state == .ongoing) {
+            if (game.state != .setup && game.state != .exit) {
                 disableContinue = false
             } else {
                 disableContinue = true
             }
+            
+            // Play BGM
+            playBGM()
+            UserDefaults.standard.set(volumeSFX, forKey: "volumeSFX")
+            changeVolume(to: Float(volumeBGM), type: .BGM)
+            changeVolume(to: Float(volumeSFX), type: .SFX)
         }
         
         // Detect change in save data
@@ -145,7 +155,7 @@ struct MainView: View {
                 newSaveData = false
             }
             
-            if (game.state == .ongoing) {
+            if (game.state != .setup && game.state != .exit) {
                 disableContinue = false
             } else {
                 disableContinue = true

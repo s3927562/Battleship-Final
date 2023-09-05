@@ -23,16 +23,14 @@ struct GameWinView: View {
         
         // Form for inputting name
         Form {
-            Section {
-                LabeledContent {
-                    TextField("Name", text: $name)
-                        .multilineTextAlignment(.trailing)
-                } label: {
-                    Text("Name")
-                }
-
-                LabeledContent("Score", value: String(game.moveLimit - game.moveCount))
+            LabeledContent {
+                TextField("Name", text: $name)
+                    .multilineTextAlignment(.trailing)
+            } label: {
+                Text("Name")
             }
+            
+            LabeledContent("Score", value: String(game.moveLimit - game.moveCount))
         }
     }
 }

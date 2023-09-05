@@ -67,11 +67,13 @@ func saveLeaderboardData(username: String, game: Game, difficulty: Difficulty) {
     }
     
     if (game.state == .win) {
+        // Create a new score object
         let newScore = Score(username: username, score: game.moveLimit - game.moveCount + 1, gameNumber: leaderboardDict[difficulty.rawValue]!.total)
         
-        // Add new score object to the array, sort array by score then gameNumber, delete the last bottom score object
+        // Add new score object to the array, sort the score objects, delete the last score object
         newScores.append(newScore)
         newScores.sort {
+            // Sort by score then sort by time
             if ($0.score == $1.score) {
                 return $0.gameNumber > $1.gameNumber
             }

@@ -82,7 +82,7 @@ struct GameView: View {
             }
             
             .onAppear {
-                if (savedGame.state != .ongoing) {
+                if (savedGame.state == .setup) {
                     // Setup new game if no save data provided
                     game.dimension = selectedDifficulty.dimension
                     game.moveLimit = selectedDifficulty.moveLimit
@@ -131,6 +131,8 @@ struct GameView: View {
                         Button {
                             saveLeaderboardData(username: name, game: game, difficulty: selectedDifficulty)
                             game.state = .exit
+                            newSaveData = true
+                            saveGameData(for: game)
                             dismiss()
                         } label: {
                             Text("Save")
@@ -140,6 +142,8 @@ struct GameView: View {
                         
                         Button {
                             game.state = .exit
+                            saveGameData(for: game)
+                            newSaveData = true
                             saveLeaderboardData(username: name, game: game, difficulty: selectedDifficulty)
                             dismiss()
                         } label: {
@@ -164,6 +168,8 @@ struct GameView: View {
                             Button {
                                 saveLeaderboardData(username: name, game: game, difficulty: selectedDifficulty)
                                 game.state = .exit
+                                saveGameData(for: game)
+                                newSaveData = true
                                 dismiss()
                             } label: {
                                 Image(systemName: "chevron.left")

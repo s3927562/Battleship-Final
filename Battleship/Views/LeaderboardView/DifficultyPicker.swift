@@ -20,7 +20,7 @@ struct DifficultyPicker: View {
             // Picker for choosing which difficulty to display leaderboard and statistics for
             Picker("", selection: $difficulty) {
                 ForEach(Difficulty.allCases.sorted { $0.dimension < $1.dimension }, id: \.self) {
-                    Text($0.rawValue)
+                    Text($0.textValue)
                 }
             }
             .pickerStyle(.segmented)

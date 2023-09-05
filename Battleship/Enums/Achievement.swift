@@ -24,17 +24,17 @@ enum Achievement: String, Codable, CaseIterable {
     
     var title: String {
         switch self {
-        case .goodJob: return "Good Job"
-        case .goodLuck: return "Better Luck Next Time"
-        case .perfectGame: return "Perfect Game"
+        case .goodJob: return String(localized: "Good Job")
+        case .goodLuck: return String(localized: "Better Luck Next Time")
+        case .perfectGame: return String(localized: "Perfect Game")
         }
     }
     
     var description: String {
         switch self {
-        case .goodJob: return "Win a game"
-        case .goodLuck: return "Lose a game"
-        case .perfectGame: return "Win a game without any miss"
+        case .goodJob: return String(localized: "Win a game")
+        case .goodLuck: return String(localized: "Lose a game")
+        case .perfectGame: return String(localized: "Win a game without any miss")
         }
     }
     
