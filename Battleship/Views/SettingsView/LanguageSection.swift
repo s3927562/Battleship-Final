@@ -7,7 +7,9 @@
  ID: s3927562
  Created  date: 05/09/2023
  Last modified: 05/09/2023
- Acknowledgement: RMIT University, COSC2659 Course, Week 1 - 5 Lecture Slides & Videos
+ Acknowledgement:
+ RMIT University, COSC2659 Course, Week 1 - 5 Lecture Slides & Videos
+ Introduction to Localization: https://fluffy.es/introduction-to-localization/
  */
 
 import SwiftUI

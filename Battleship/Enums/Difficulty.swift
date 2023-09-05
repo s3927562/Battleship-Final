@@ -10,6 +10,7 @@
  Acknowledgement:
  RMIT University, COSC2659 Course, Week 1 - 9 Lecture Slides & Videos
  How to create SwiftUI Picker from Enum | Sarunw: https://sarunw.com/posts/swiftui-picker-enum
+ SwiftUI Localization Tutorial for iOS: Getting Started | Kodeco: https://www.kodeco.com/27469286-swiftui-localization-tutorial-for-ios-getting-started
  */
 
 import Foundation
