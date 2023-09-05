@@ -142,10 +142,9 @@ struct MainView: View {
             }
             
             // Play BGM
-            playBGM()
+            UserDefaults.standard.set(volumeBGM, forKey: "volumeBGM")
             UserDefaults.standard.set(volumeSFX, forKey: "volumeSFX")
-            changeVolume(to: Float(volumeBGM), type: .BGM)
-            changeVolume(to: Float(volumeSFX), type: .SFX)
+            playBGM()
         }
         
         // Detect change in save data

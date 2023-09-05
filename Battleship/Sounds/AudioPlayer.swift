@@ -28,8 +28,14 @@ func playBGM() {
     if let path = Bundle.main.path(forResource: "mainLoop", ofType: "aiff") {
         do {
             BGMAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path), fileTypeHint: "aiff")
+            
+            // Infinite loop
             BGMAudioPlayer?.numberOfLoops = -1
+            
+            // Make music fade in
+            BGMAudioPlayer?.volume = 0
             BGMAudioPlayer?.play()
+            BGMAudioPlayer?.setVolume(Float(UserDefaults.standard.double(forKey: "volumeBGM") / 100), fadeDuration: 0.5)
         } catch {
             print("Failed to play mainLoop.mp3")
         }

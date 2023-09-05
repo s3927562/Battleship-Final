@@ -44,14 +44,14 @@
 		146D08EE2AA0BC6D00F0533C /* gameWin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08ED2AA0BC6D00F0533C /* gameWin.mp3 */; };
 		146D08F02AA0BC9400F0533C /* gameLose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08EF2AA0BC9400F0533C /* gameLose.mp3 */; };
 		146D08F22AA0C33E00F0533C /* shootMiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08F12AA0C33E00F0533C /* shootMiss.mp3 */; };
-		146D08F42AA0C35A00F0533C /* shootPartialHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08F32AA0C35A00F0533C /* shootPartialHit.mp3 */; };
-		146D08F62AA0C36C00F0533C /* shootFullHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146D08F52AA0C36C00F0533C /* shootFullHit.mp3 */; };
 		146D08F92AA0CBAE00F0533C /* StatisticSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08F82AA0CBAE00F0533C /* StatisticSection.swift */; };
 		146D08FB2AA0CD0000F0533C /* LeaderboardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08FA2AA0CD0000F0533C /* LeaderboardSection.swift */; };
 		146D08FD2AA0CDB600F0533C /* AchievementSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08FC2AA0CDB600F0533C /* AchievementSection.swift */; };
 		146D08FF2AA0CEAA00F0533C /* DifficultyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D08FE2AA0CEAA00F0533C /* DifficultyPicker.swift */; };
 		146D09032AA0CFF600F0533C /* SolutionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D09022AA0CFF600F0533C /* SolutionGrid.swift */; };
 		146D09062AA0D0CE00F0533C /* PlayGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D09052AA0D0CE00F0533C /* PlayGrid.swift */; };
+		14AC513F2AA74CEB00123414 /* shootFullHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14AC513D2AA74CEA00123414 /* shootFullHit.mp3 */; };
+		14AC51402AA74CEB00123414 /* shootPartialHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14AC513E2AA74CEA00123414 /* shootPartialHit.mp3 */; };
 		14DCB7982A9F806C0016B701 /* GameWinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCB7972A9F806C0016B701 /* GameWinView.swift */; };
 		14DCB79A2A9F80790016B701 /* GameLoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCB7992A9F80790016B701 /* GameLoseView.swift */; };
 /* End PBXBuildFile section */
@@ -95,14 +95,14 @@
 		146D08ED2AA0BC6D00F0533C /* gameWin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameWin.mp3; sourceTree = "<group>"; };
 		146D08EF2AA0BC9400F0533C /* gameLose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameLose.mp3; sourceTree = "<group>"; };
 		146D08F12AA0C33E00F0533C /* shootMiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shootMiss.mp3; sourceTree = "<group>"; };
-		146D08F32AA0C35A00F0533C /* shootPartialHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shootPartialHit.mp3; sourceTree = "<group>"; };
-		146D08F52AA0C36C00F0533C /* shootFullHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shootFullHit.mp3; sourceTree = "<group>"; };
 		146D08F82AA0CBAE00F0533C /* StatisticSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticSection.swift; sourceTree = "<group>"; };
 		146D08FA2AA0CD0000F0533C /* LeaderboardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardSection.swift; sourceTree = "<group>"; };
 		146D08FC2AA0CDB600F0533C /* AchievementSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementSection.swift; sourceTree = "<group>"; };
 		146D08FE2AA0CEAA00F0533C /* DifficultyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyPicker.swift; sourceTree = "<group>"; };
 		146D09022AA0CFF600F0533C /* SolutionGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionGrid.swift; sourceTree = "<group>"; };
 		146D09052AA0D0CE00F0533C /* PlayGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGrid.swift; sourceTree = "<group>"; };
+		14AC513D2AA74CEA00123414 /* shootFullHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shootFullHit.mp3; sourceTree = "<group>"; };
+		14AC513E2AA74CEA00123414 /* shootPartialHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shootPartialHit.mp3; sourceTree = "<group>"; };
 		14DCB7972A9F806C0016B701 /* GameWinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWinView.swift; sourceTree = "<group>"; };
 		14DCB7992A9F80790016B701 /* GameLoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,8 +205,8 @@
 				146D08EB2AA0BB8E00F0533C /* AudioPlayer.swift */,
 				145A7C4C2AA6ECFE00499A69 /* mainLoop.aiff */,
 				146D08F12AA0C33E00F0533C /* shootMiss.mp3 */,
-				146D08F32AA0C35A00F0533C /* shootPartialHit.mp3 */,
-				146D08F52AA0C36C00F0533C /* shootFullHit.mp3 */,
+				14AC513E2AA74CEA00123414 /* shootPartialHit.mp3 */,
+				14AC513D2AA74CEA00123414 /* shootFullHit.mp3 */,
 				146D08ED2AA0BC6D00F0533C /* gameWin.mp3 */,
 				146D08EF2AA0BC9400F0533C /* gameLose.mp3 */,
 			);
@@ -331,12 +331,12 @@
 				146D08F02AA0BC9400F0533C /* gameLose.mp3 in Resources */,
 				145A7C5B2AA6FCDF00499A69 /* Localizable.strings in Resources */,
 				1401C9752A99F2F600DAD4CA /* Assets.xcassets in Resources */,
-				146D08F62AA0C36C00F0533C /* shootFullHit.mp3 in Resources */,
 				145A7C4D2AA6ECFE00499A69 /* mainLoop.aiff in Resources */,
 				145A7C582AA6FCDF00499A69 /* Battleship-InfoPlist.strings in Resources */,
+				14AC513F2AA74CEB00123414 /* shootFullHit.mp3 in Resources */,
 				146D08EE2AA0BC6D00F0533C /* gameWin.mp3 in Resources */,
-				146D08F42AA0C35A00F0533C /* shootPartialHit.mp3 in Resources */,
 				146D08F22AA0C33E00F0533C /* shootMiss.mp3 in Resources */,
+				14AC51402AA74CEB00123414 /* shootPartialHit.mp3 in Resources */,
 				1401C97F2A99F30A00DAD4CA /* default.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
