@@ -24,6 +24,7 @@
 		1411952C2A9CC44C00745425 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952B2A9CC44C00745425 /* Game.swift */; };
 		1411952E2A9CC5F300745425 /* OceanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952D2A9CC5F300745425 /* OceanState.swift */; };
 		141195302A9CD00200745425 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411952F2A9CD00200745425 /* GameState.swift */; };
+		1433C1EC2AA8A5C900AD11A9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1433C1EB2AA8A5C900AD11A9 /* README.md */; };
 		1452C48C2A9B360500F351A6 /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C48B2A9B360500F351A6 /* HowToPlayView.swift */; };
 		1452C4932A9B381B00F351A6 /* SheetToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4922A9B381B00F351A6 /* SheetToolbar.swift */; };
 		1452C4952A9B39AF00F351A6 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452C4942A9B39AF00F351A6 /* Difficulty.swift */; };
@@ -75,6 +76,7 @@
 		1411952B2A9CC44C00745425 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1411952D2A9CC5F300745425 /* OceanState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanState.swift; sourceTree = "<group>"; };
 		1411952F2A9CD00200745425 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		1433C1EB2AA8A5C900AD11A9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1452C48B2A9B360500F351A6 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
 		1452C4922A9B381B00F351A6 /* SheetToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetToolbar.swift; sourceTree = "<group>"; };
 		1452C4942A9B39AF00F351A6 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				1401C9702A99F2F400DAD4CA /* BattleshipApp.swift */,
 				1401C9742A99F2F600DAD4CA /* Assets.xcassets */,
 				1401C9762A99F2F600DAD4CA /* Preview Content */,
+				1433C1EB2AA8A5C900AD11A9 /* README.md */,
 			);
 			path = Battleship;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				1401C9752A99F2F600DAD4CA /* Assets.xcassets in Resources */,
 				145A7C4D2AA6ECFE00499A69 /* mainLoop.aiff in Resources */,
 				145A7C582AA6FCDF00499A69 /* Battleship-InfoPlist.strings in Resources */,
+				1433C1EC2AA8A5C900AD11A9 /* README.md in Resources */,
 				14AC513F2AA74CEB00123414 /* shootFullHit.mp3 in Resources */,
 				146D08EE2AA0BC6D00F0533C /* gameWin.mp3 in Resources */,
 				146D08F22AA0C33E00F0533C /* shootMiss.mp3 in Resources */,
