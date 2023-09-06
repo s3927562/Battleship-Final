@@ -100,7 +100,7 @@ struct GameView: View {
                 
                 // Setup Grid view
                 horizontalSpacing = geo.size.width / 2 / CGFloat(game.dimension + 4)
-                verticalSpacing = geo.size.height / 2 / CGFloat(game.dimension + 4)
+                verticalSpacing = (geo.size.height - 150) / 2 / CGFloat(game.dimension + 4)
                 let intSize = min(geo.size.width, geo.size.height) / 20
                 scaledSize =  intSize / CGFloat(game.dimension) + 5
             }
@@ -108,7 +108,7 @@ struct GameView: View {
             // Changing Grid spacing on rotation
             .onChange(of: geo.size) { _ in
                 horizontalSpacing = geo.size.width / 2 / CGFloat(game.dimension + 4)
-                verticalSpacing = geo.size.height / 2 / CGFloat(game.dimension + 4)
+                verticalSpacing = (geo.size.height - 150) / 2 / CGFloat(game.dimension + 4)
                 let intSize = min(geo.size.width, geo.size.height) / 20
                 scaledSize =  intSize / CGFloat(game.dimension) + 5
             }

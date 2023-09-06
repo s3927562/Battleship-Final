@@ -30,7 +30,7 @@ struct GameWinView: View {
                 Text("Name")
             }
             
-            LabeledContent("Score", value: String(game.moveLimit - game.moveCount))
+            LabeledContent("Score", value: String(game.moveLimit - game.moveCount + 1))
         }
     }
 }
