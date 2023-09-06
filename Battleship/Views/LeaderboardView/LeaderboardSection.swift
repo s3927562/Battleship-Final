@@ -21,7 +21,7 @@ struct LeaderboardSection: View {
             ForEach(leaderboard.scores) {
                 if ($0.username == "" && $0.score <= 0) {
                     // Display "None" for both entries if no username and score
-                    LabeledContent("None", value: "None")
+                    LabeledContent("None", value: String(localized: "None"))
                 } else {
                     LabeledContent($0.username, value: String($0.score))
                 }
